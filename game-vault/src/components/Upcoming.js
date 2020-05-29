@@ -29,7 +29,20 @@ class Upcoming extends Component {
       return <div>loading</div>;
     }
     if (!loading) {
-      return <div className="upcoming">{data.map((item) => {})}</div>;
+      return data.map((game) => {
+        return (
+          <div className="upcoming-game">
+            <div className="image">
+              <img
+                className="upcoming-thumbnail"
+                src={game.background_image}
+                alt=""
+              />
+            </div>
+            <p>{game.name}</p>
+          </div>
+        );
+      });
     }
   }
 }
