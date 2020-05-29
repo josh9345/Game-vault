@@ -1,22 +1,22 @@
-import React from "react";
+import React, { Component } from "react";
+import Upcoming from "./Upcoming";
 
-function Home() {
-  let json = "";
-
-  const request = async () => {
-    let response = await fetch("https://api.rawg.io/api/games");
-    let json = await response.json();
-    console.log(json.seo_title);
-    return json;
-  };
-  const useRequest = async () => {
-    const res = await request();
-    return res;
-  };
-  const data = useRequest();
-
-  console.log(data);
-  return <div>{data.seo_title}</div>;
+class Home extends Component {
+  render() {
+    return (
+      <div>
+        <div className="header">
+          <h2>Welcome to the game vault</h2>
+        </div>
+        <div className="intro">
+          <h4>This site is powered by the RAWG Game API</h4>
+        </div>
+        <div className="upcoming-container">
+          <Upcoming />
+        </div>
+      </div>
+    );
+  }
 }
 
 export default Home;

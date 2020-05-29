@@ -1,14 +1,16 @@
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header {
+  text-align: center;
+  height: 75px;
+  background-color: #333;
+  color: white;
+  padding: 25px 0;
+}
+.intro {
+  text-align: center;
 }
